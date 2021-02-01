@@ -1,7 +1,7 @@
 {
   "name": "GrahamSH",
   "short_name": "GrahamSH",
-  "description": "This is the repository for @GrahamSH-LLK's new Nuxt & Tailwind site. It's a WIP, and it will change regularly. You can check the site out at https://staging.grahamsh.com. ## Build Setup",
+  "description": "GrahamSH's site.",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.f8d245.png",
