@@ -11,7 +11,7 @@
     "export": "nuxt export"
   },
   "dependencies": {
-    "@nuxt/content": "^1.11.1",
+    "@nuxt/content": "^1.14.0",
     "@nuxt/image": "^0.2.1",
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/onesignal": "^3.0.0-beta.16",
