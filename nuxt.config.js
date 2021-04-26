@@ -97,4 +97,5 @@ export default {
     exclude: ["/articles/**"],
   },
   plugins: ["~/plugins/json-ld", "~/plugins/unicons"],
+  storybook: {},
 };

@@ -28,6 +28,10 @@
         crossorigin="anonymous"
         async
       ></script>
+<<<<<<< Updated upstream
+=======
+      <NextPrev />
+>>>>>>> Stashed changes
     </article>
   </main>
 </template>
@@ -141,7 +145,11 @@ export default {
       .surround(params.slug)
       .fetch();
 
+<<<<<<< Updated upstream
     return { article, prev, next };
+=======
+    return { article };
+>>>>>>> Stashed changes
   },
 };
 </script>
