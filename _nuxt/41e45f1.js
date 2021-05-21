@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{304:function(t,e,n){"use strict";n.r(e);var l=n(12),component=Object(l.a)({},(function(){var t=this,e=t.$createElement;return(t._self._c||e)("h1",{staticClass:"text-3xl font-bold"},[t._v("We have run out of tickets. Try again later.")])}),[],!1,null,null,null);e.default=component.exports}}]);
