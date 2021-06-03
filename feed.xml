@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Blog - GrahamSH</title>
+        <link>https://grahamsh.com/feed.xml</link>
+        <description>Code notes and other assorted goodies from GrahamSH</description>
+        <lastBuildDate>Thu, 03 Jun 2021 18:48:06 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[Creating an Env Setup Script]]></title>
+            <link>https://grahamsh.com/blog/env</link>
+            <guid>https://grahamsh.com/blog/env</guid>
+            <content:encoded><![CDATA[<p>The other day, I decided to make a setup script for wasteof.money. If you don't know what wasteof.money is, check it out at dev.wasteof.money!
+To start, I wanted to write to .env. The script I wrote for that simply wrote to .env using fs.</p>
+<pre><code class="language-js[env.js]">const fs = require(&quot;fs&quot;);
+fs.writeFile(&quot;.env&quot;, `DB_URL=`, &quot;utf8&quot;, function () {
+  console.log(&quot;Got it!&quot;);
+});
+</code></pre>
+<p>Then, I wanted to have the user be able to put in inputs. For that, I used the prompts package from NPM. My code now looked like this:</p>
+<pre><code class="language-js[env.js]">const prompts = require(&quot;prompts&quot;);
+const fs = require(&quot;fs&quot;);
+(async () =&gt; {
+  const response = await prompts([
+    {
+      type: &quot;text&quot;,
+      name: &quot;url&quot;,
+      message:
+        &quot;What is your MongoDB URL? (If you are using MongoDB Atlas, you can keep the &lt;&gt; values)&quot;,
+    },
+    {
+      type: &quot;text&quot;,
+      name: &quot;port&quot;,
+      message: &quot;What port should the site run on?&quot;,
+      initial: 8080,
+    }
+  ]);
+
+  fs.writeFile(
+    &quot;.env&quot;,
+    `DB_URL=${response.url
+      \nLISTEN_PORT=${response.port}`,
+    &quot;utf8&quot;,
+    function () {
+      console.log(&quot;Your settings have been written to .env!&quot;);
+      console.log(&quot;Run npm run serve to start the server or npm run dev to start it with nodemon.&quot;);
+    }
+  );
+})();
+</code></pre>
+<p>At this point, the code was working, but it still didn't satisfy me. I wanted the user to be able to input a password and have that switched out with the <code>&lt;password&gt;</code> value from MongoDB Atlas.</p>
+<p>I decided that it should also ask the user if they are using local, or Atlas. My final version looked like this.</p>
+<pre><code class="language-js[env.js]">const prompts = require(&quot;prompts&quot;);
+const fs = require(&quot;fs&quot;);
+require(&quot;dotenv&quot;).config();
+const port = process.env.LISTEN_PORT || 8080;
+const url = process.env.DB_URL || &quot;localhost/social&quot;;
+
+(async () =&gt; {
+  const response = await prompts([
+    {
+      type: &quot;text&quot;,
+      name: &quot;url&quot;,
+      message: &quot;What is your MongoDB URL? (If you are using MongoDB Atlas, you can keep the &lt;&gt; values)&quot;,
+      initial: url,
+    },
+    {
+      type: &quot;select&quot;,
+      name: &quot;value&quot;,
+      message: &quot;Pick a hosting type&quot;,
+      choices: [
+        {
+          title: &quot;MongoDB Atlas&quot;,
+          description: &quot;MongoDB Atlas cloud hosting&quot;,
+          value: &quot;atlas&quot;,
+        },
+        {
+          title: &quot;Local MongoDB&quot;,
+          value: &quot;local&quot;,
+          description: &quot;A local MongoDB instance&quot;,
+        },
+      ],
+    },
+    {
+      type: (prev) =&gt; (prev == &quot;atlas&quot; ? &quot;password&quot; : null),
+      name: &quot;password&quot;,
+      message: &quot;What is your MongoDB Password?&quot;,
+    },
+    {
+      type: &quot;text&quot;,
+      name: &quot;port&quot;,
+      message: &quot;What port should the site run on?&quot;,
+      initial: port,
+    },
+  ]);
+
+  fs.writeFile(
+    &quot;.env&quot;,
+    `DB_URL=${response.url.replace(&quot;&lt;password&gt;&quot;, response.password).replace(&quot;&lt;dbname&gt;&quot;, &quot;social&quot;)}\nLISTEN_PORT=${
+      response.port
+    }`,
+    &quot;utf8&quot;,
+    function () {
+      console.log(&quot;Your settings have been written to .env!&quot;);
+      console.log(&quot;Run npm run serve to start the server or npm run dev to start it with nodemon.&quot;);
+    }
+  );
+})();
+</code></pre>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[My favorite npm packages]]></title>
+            <link>https://grahamsh.com/blog/fave_packages</link>
+            <guid>https://grahamsh.com/blog/fave_packages</guid>
+            <content:encoded><![CDATA[<p>As you probably know, npm is the package manager for Node.JS. Here are my 5 favorite npm packages.</p>
+<h2>5. <a href="https://npmjs.com/package/chalk">chalk</a></h2>
+<p>Chalk lets you print colored data to the console.
+For example:</p>
+<pre><code class="language-js">const chalk = require(&quot;chalk&quot;);
+console.log(chalk.blue(&quot;Hello world!&quot;));
+// Hello world
+</code></pre>
+<h2>4. <a href="https://npmjs.com/package/bijou.js">Bijou.js</a></h2>
+<p>Bijou.js is a package that provides utilities for node and in the browser</p>
+<pre><code class="language-js">import { uuid } from &quot;https://unpkg.com/bijou.js&quot;;
+console.log(uuid());
+// c3435c88-0a20-491f-9391-3afde9c4a2d1
+</code></pre>
+<h2>3. <a href="https://npmjs.com/package/node-fetch">node-fetch</a></h2>
+<p>Node-fetch is a package that provides <code>fetch()</code> for Node. It's awesome for fetching data in node applications, since the use is identical to <code>window.fetch()</code>.
+To fetch data, you could use it like this:</p>
+<pre><code class="language-js">const fetch = require(&quot;fetch&quot;);
+(async () =&gt; {
+  const res = await fetch(&quot;https://jsonplaceholder.typicode.com/todos/1&quot;);
+  const data = await res.json();
+  console.log(data);
+})();
+// {
+// &quot;userId&quot;: 1,
+// &quot;id&quot;: 1,
+// &quot;title&quot;: &quot;delectus aut autem&quot;,
+// &quot;completed&quot;: false
+// }
+</code></pre>
+<h2>2. <a href="https://npmjs.com/package/vue">Vue</a></h2>
+<p>Vue is a package that does all of your DOM manipulation for you. It's amazing, and is my tool of choice for any new projects.</p>
+<h2>1. <a href="https://npmjs.com/package/vue">Nuxt</a></h2>
+<p>Nuxt provides SSR for Vue. It also includes easier components, single file pages, layouts, and more.</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Welcome to my new Nuxt site!]]></title>
+            <link>https://grahamsh.com/blog/nuxt</link>
+            <guid>https://grahamsh.com/blog/nuxt</guid>
+            <content:encoded><![CDATA[<p>Hi, and welcome to my new Nuxt site and blog! It's a lot faster and has a PWA. Currently, it's staticly generated with <code>nuxt generate</code> in GitHub Actions and deployed to GitHub Pages.</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Weekly blog posts!]]></title>
+            <link>https://grahamsh.com/blog/weekly_post</link>
+            <guid>https://grahamsh.com/blog/weekly_post</guid>
+            <content:encoded><![CDATA[<p>I'm committing to writing one blog post a week about something I'm passionate about, from a book I read to a new coding project. Watch this blog for a new post coming soon!</p>
+<p>Have ideas on what I should post? Comment below!</p>
+]]></content:encoded>
+        </item>
+    </channel>
+</rss>
