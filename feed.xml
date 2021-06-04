@@ -4,13 +4,14 @@
         <title>Blog - GrahamSH</title>
         <link>https://grahamsh.com/feed.xml</link>
         <description>Code notes and other assorted goodies from GrahamSH</description>
-        <lastBuildDate>Thu, 03 Jun 2021 18:48:06 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 04 Jun 2021 16:33:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
             <title><![CDATA[Creating an Env Setup Script]]></title>
             <link>https://grahamsh.com/blog/env</link>
             <guid>https://grahamsh.com/blog/env</guid>
+            <pubDate>Wed, 13 Jan 2021 22:11:12 GMT</pubDate>
             <content:encoded><![CDATA[<p>The other day, I decided to make a setup script for wasteof.money. If you don't know what wasteof.money is, check it out at dev.wasteof.money!
 To start, I wanted to write to .env. The script I wrote for that simply wrote to .env using fs.</p>
 <pre><code class="language-js[env.js]">const fs = require(&quot;fs&quot;);
@@ -114,6 +115,7 @@ const url = process.env.DB_URL || &quot;localhost/social&quot;;
             <title><![CDATA[My favorite npm packages]]></title>
             <link>https://grahamsh.com/blog/fave_packages</link>
             <guid>https://grahamsh.com/blog/fave_packages</guid>
+            <pubDate>Thu, 18 Feb 2021 22:11:12 GMT</pubDate>
             <content:encoded><![CDATA[<p>As you probably know, npm is the package manager for Node.JS. Here are my 5 favorite npm packages.</p>
 <h2>5. <a href="https://npmjs.com/package/chalk">chalk</a></h2>
 <p>Chalk lets you print colored data to the console.
@@ -154,6 +156,7 @@ To fetch data, you could use it like this:</p>
             <title><![CDATA[Welcome to my new Nuxt site!]]></title>
             <link>https://grahamsh.com/blog/nuxt</link>
             <guid>https://grahamsh.com/blog/nuxt</guid>
+            <pubDate>Sun, 24 Jan 2021 22:11:12 GMT</pubDate>
             <content:encoded><![CDATA[<p>Hi, and welcome to my new Nuxt site and blog! It's a lot faster and has a PWA. Currently, it's staticly generated with <code>nuxt generate</code> in GitHub Actions and deployed to GitHub Pages.</p>
 ]]></content:encoded>
         </item>
@@ -161,6 +164,7 @@ To fetch data, you could use it like this:</p>
             <title><![CDATA[Weekly blog posts!]]></title>
             <link>https://grahamsh.com/blog/weekly_post</link>
             <guid>https://grahamsh.com/blog/weekly_post</guid>
+            <pubDate>Fri, 04 Jun 2021 22:11:12 GMT</pubDate>
             <content:encoded><![CDATA[<p>I'm committing to writing one blog post a week about something I'm passionate about, from a book I read to a new coding project. Watch this blog for a new post coming soon!</p>
 <p>Have ideas on what I should post? Comment below!</p>
 ]]></content:encoded>
