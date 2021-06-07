@@ -4,9 +4,18 @@
         <title>Blog - GrahamSH</title>
         <link>https://grahamsh.com/feed.xml</link>
         <description>Code notes and other assorted goodies from GrahamSH</description>
-        <lastBuildDate>Mon, 07 Jun 2021 11:28:56 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Jun 2021 13:04:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[E-Jenda]]></title>
+            <link>https://grahamsh.com/blog/e-jenda</link>
+            <guid>https://grahamsh.com/blog/e-jenda</guid>
+            <pubDate>Mon, 07 Jun 2021 22:11:12 GMT</pubDate>
+            <content:encoded><![CDATA[<p>My newest project is going to be an E-Jenda: a digital agenda. It lets you put items in that you have to do. As you complete them, you can check them off. If there are any items that you haven't completed by the end of the day, it starts sending notifications.</p>
+<p>I haven't started building it <em>yet</em>, but check back soon for a sneak peek!</p>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Creating an Env Setup Script]]></title>
             <link>https://grahamsh.com/blog/env</link>
