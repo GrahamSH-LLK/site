@@ -4,7 +4,7 @@
         <title>Blog - GrahamSH</title>
         <link>https://grahamsh.com/feed.xml</link>
         <description>Code notes and other assorted goodies from GrahamSH</description>
-        <lastBuildDate>Fri, 18 Jun 2021 11:12:37 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Jun 2021 14:00:36 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -14,6 +14,47 @@
             <pubDate>Mon, 07 Jun 2021 22:11:12 GMT</pubDate>
             <content:encoded><![CDATA[<p>My newest project is going to be an E-Jenda: a digital agenda. It lets you put items in that you have to do. As you complete them, you can check them off. If there are any items that you haven't completed by the end of the day, it starts sending notifications.</p>
 <p>I haven't started building it <em>yet</em>, but check back soon for a sneak peek!</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[My favorite npm packages]]></title>
+            <link>https://grahamsh.com/blog/fave_packages</link>
+            <guid>https://grahamsh.com/blog/fave_packages</guid>
+            <pubDate>Thu, 18 Feb 2021 22:11:12 GMT</pubDate>
+            <content:encoded><![CDATA[<p>As you probably know, npm is the package manager for Node.JS. Here are my 5 favorite npm packages.</p>
+<h2>5. <a href="https://npmjs.com/package/chalk">chalk</a></h2>
+<p>Chalk lets you print colored data to the console.
+For example:</p>
+<pre><code class="language-js">const chalk = require(&quot;chalk&quot;);
+console.log(chalk.blue(&quot;Hello world!&quot;));
+// Hello world
+</code></pre>
+<h2>4. <a href="https://npmjs.com/package/bijou.js">Bijou.js</a></h2>
+<p>Bijou.js is a package that provides utilities for node and in the browser</p>
+<pre><code class="language-js">import { uuid } from &quot;https://unpkg.com/bijou.js&quot;;
+console.log(uuid());
+// c3435c88-0a20-491f-9391-3afde9c4a2d1
+</code></pre>
+<h2>3. <a href="https://npmjs.com/package/node-fetch">node-fetch</a></h2>
+<p>Node-fetch is a package that provides <code>fetch()</code> for Node. It's awesome for fetching data in node applications, since the use is identical to <code>window.fetch()</code>.
+To fetch data, you could use it like this:</p>
+<pre><code class="language-js">const fetch = require(&quot;fetch&quot;);
+(async () =&gt; {
+  const res = await fetch(&quot;https://jsonplaceholder.typicode.com/todos/1&quot;);
+  const data = await res.json();
+  console.log(data);
+})();
+// {
+// &quot;userId&quot;: 1,
+// &quot;id&quot;: 1,
+// &quot;title&quot;: &quot;delectus aut autem&quot;,
+// &quot;completed&quot;: false
+// }
+</code></pre>
+<h2>2. <a href="https://npmjs.com/package/vue">Vue</a></h2>
+<p>Vue is a package that does all of your DOM manipulation for you. It's amazing, and is my tool of choice for any new projects.</p>
+<h2>1. <a href="https://npmjs.com/package/vue">Nuxt</a></h2>
+<p>Nuxt provides SSR for Vue. It also includes easier components, single file pages, layouts, and more.</p>
 ]]></content:encoded>
         </item>
         <item>
@@ -118,47 +159,6 @@ const url = process.env.DB_URL || &quot;localhost/social&quot;;
   );
 })();
 </code></pre>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[My favorite npm packages]]></title>
-            <link>https://grahamsh.com/blog/fave_packages</link>
-            <guid>https://grahamsh.com/blog/fave_packages</guid>
-            <pubDate>Thu, 18 Feb 2021 22:11:12 GMT</pubDate>
-            <content:encoded><![CDATA[<p>As you probably know, npm is the package manager for Node.JS. Here are my 5 favorite npm packages.</p>
-<h2>5. <a href="https://npmjs.com/package/chalk">chalk</a></h2>
-<p>Chalk lets you print colored data to the console.
-For example:</p>
-<pre><code class="language-js">const chalk = require(&quot;chalk&quot;);
-console.log(chalk.blue(&quot;Hello world!&quot;));
-// Hello world
-</code></pre>
-<h2>4. <a href="https://npmjs.com/package/bijou.js">Bijou.js</a></h2>
-<p>Bijou.js is a package that provides utilities for node and in the browser</p>
-<pre><code class="language-js">import { uuid } from &quot;https://unpkg.com/bijou.js&quot;;
-console.log(uuid());
-// c3435c88-0a20-491f-9391-3afde9c4a2d1
-</code></pre>
-<h2>3. <a href="https://npmjs.com/package/node-fetch">node-fetch</a></h2>
-<p>Node-fetch is a package that provides <code>fetch()</code> for Node. It's awesome for fetching data in node applications, since the use is identical to <code>window.fetch()</code>.
-To fetch data, you could use it like this:</p>
-<pre><code class="language-js">const fetch = require(&quot;fetch&quot;);
-(async () =&gt; {
-  const res = await fetch(&quot;https://jsonplaceholder.typicode.com/todos/1&quot;);
-  const data = await res.json();
-  console.log(data);
-})();
-// {
-// &quot;userId&quot;: 1,
-// &quot;id&quot;: 1,
-// &quot;title&quot;: &quot;delectus aut autem&quot;,
-// &quot;completed&quot;: false
-// }
-</code></pre>
-<h2>2. <a href="https://npmjs.com/package/vue">Vue</a></h2>
-<p>Vue is a package that does all of your DOM manipulation for you. It's amazing, and is my tool of choice for any new projects.</p>
-<h2>1. <a href="https://npmjs.com/package/vue">Nuxt</a></h2>
-<p>Nuxt provides SSR for Vue. It also includes easier components, single file pages, layouts, and more.</p>
 ]]></content:encoded>
         </item>
         <item>
