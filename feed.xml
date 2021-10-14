@@ -4,7 +4,7 @@
         <title>Blog - GrahamSH</title>
         <link>https://grahamsh.com/feed.xml</link>
         <description>Code notes and other assorted goodies from GrahamSH</description>
-        <lastBuildDate>Thu, 14 Oct 2021 16:23:01 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 14 Oct 2021 16:26:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -17,7 +17,7 @@
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[E-Jenda]]></title>
+            <title><![CDATA[Ejenda Four Months Later]]></title>
             <link>https://grahamsh.com/blog/ejenda-4-months-later</link>
             <guid>https://grahamsh.com/blog/ejenda-4-months-later</guid>
             <pubDate>Thu, 14 Oct 2021 16:18:12 GMT</pubDate>
