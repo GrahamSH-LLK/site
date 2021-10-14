@@ -4,7 +4,7 @@
         <title>Blog - GrahamSH</title>
         <link>https://grahamsh.com/feed.xml</link>
         <description>Code notes and other assorted goodies from GrahamSH</description>
-        <lastBuildDate>Thu, 14 Oct 2021 16:17:05 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 14 Oct 2021 16:23:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -14,6 +14,29 @@
             <pubDate>Mon, 07 Jun 2021 22:11:12 GMT</pubDate>
             <content:encoded><![CDATA[<p>My newest project is going to be an E-Jenda: a digital agenda. It lets you put items in that you have to do. As you complete them, you can check them off. If there are any items that you haven't completed by the end of the day, it starts sending notifications.</p>
 <p>I haven't started building it <em>yet</em>, but check back soon for a sneak peek!</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[E-Jenda]]></title>
+            <link>https://grahamsh.com/blog/ejenda-4-months-later</link>
+            <guid>https://grahamsh.com/blog/ejenda-4-months-later</guid>
+            <pubDate>Thu, 14 Oct 2021 16:18:12 GMT</pubDate>
+            <content:encoded><![CDATA[<p>Four months ago, I posted this message.</p>
+<blockquote>
+<p>My newest project is going to be an E-Jenda: a digital agenda. It lets you put items in that you have to do. As you complete them, you can check them off. If there are any items that you haven't completed by the end of the day, it starts sending notifications.</p>
+</blockquote>
+<blockquote>
+<p>I haven't started building it <em>yet</em>, but check back soon for a sneak peek!</p>
+</blockquote>
+<p>Here's an update on Ejenda now.</p>
+<ul>
+<li>Ejenda is now on v2, with accounts</li>
+<li>Your assignments sync across computers</li>
+<li>There's an awesome new calendar view</li>
+<li>You can customize your subjects</li>
+<li>The domain is now https://ejenda.org, thanks to Fosshost</li>
+<li>It's much, much, faster!</li>
+</ul>
 ]]></content:encoded>
         </item>
         <item>
