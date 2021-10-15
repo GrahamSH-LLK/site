@@ -4,7 +4,7 @@
         <title>Blog - GrahamSH</title>
         <link>https://grahamsh.com/feed.xml</link>
         <description>Code notes and other assorted goodies from GrahamSH</description>
-        <lastBuildDate>Thu, 14 Oct 2021 17:54:29 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 15 Oct 2021 13:14:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -185,20 +185,20 @@ To fetch data, you could use it like this:</p>
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Welcome to my new Nuxt site!]]></title>
+            <link>https://grahamsh.com/blog/nuxt</link>
+            <guid>https://grahamsh.com/blog/nuxt</guid>
+            <pubDate>Sun, 24 Jan 2021 22:11:12 GMT</pubDate>
+            <content:encoded><![CDATA[<p>Hi, and welcome to my new Nuxt site and blog! It's a lot faster and has a PWA. Currently, it's staticly generated with <code>nuxt generate</code> in GitHub Actions and deployed to GitHub Pages.</p>
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Weekly blog posts!]]></title>
             <link>https://grahamsh.com/blog/weekly_post</link>
             <guid>https://grahamsh.com/blog/weekly_post</guid>
             <pubDate>Fri, 04 Jun 2021 22:11:12 GMT</pubDate>
             <content:encoded><![CDATA[<p>I'm committing to writing one blog post a week about something I'm passionate about, from a book I read to a new coding project. Watch this blog for a new post coming soon!</p>
 <p>Have ideas on what I should post? Comment below!</p>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Welcome to my new Nuxt site!]]></title>
-            <link>https://grahamsh.com/blog/nuxt</link>
-            <guid>https://grahamsh.com/blog/nuxt</guid>
-            <pubDate>Sun, 24 Jan 2021 22:11:12 GMT</pubDate>
-            <content:encoded><![CDATA[<p>Hi, and welcome to my new Nuxt site and blog! It's a lot faster and has a PWA. Currently, it's staticly generated with <code>nuxt generate</code> in GitHub Actions and deployed to GitHub Pages.</p>
 ]]></content:encoded>
         </item>
     </channel>
