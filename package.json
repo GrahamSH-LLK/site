@@ -22,7 +22,7 @@
     "@nuxtjs/svg": "^0.3.0",
     "@storybook/addon-docs": "^6.3.11",
     "@tailwindcss/typography": "^0.4.1",
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.4.7",
     "core-js": "^3.18.3",
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-div": "^1.1.0",
